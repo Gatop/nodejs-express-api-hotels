@@ -27,7 +27,7 @@ nodemon src/server.js
 
 You can download this examples and import them with **Postman** to test the API.
 
- * <a href="https://github.com/Gatop/#">**Postman Requests**</a>
+ * <a href="https://github.com/Gatop/nodejs-express-api-hotels/blob/master/documentation/Almundo%20-%20ApiRest.postman_collection.json">**Postman Requests**</a>
 
 ### Endpoints APIRest (Mappings)
 
@@ -55,7 +55,7 @@ You can download this examples and import them with **Postman** to test the API.
 
 ## Modules
 
-ome of non-standard modules used:
+This modules where used to create this API:
 
 * [express](https://www.npmjs.com/package/express)
 * [mongoose](https://www.npmjs.com/package/mongoose)
