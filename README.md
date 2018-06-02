@@ -5,7 +5,7 @@ This is an API built with **NodeJs** using **Express Framework**. Also a **Mongo
 ### Clone the repo
 
 ```sh
-git clone git@github.com:Gatop/nodejs-express-api-hotels.git
+git clone https://github.com/Gatop/nodejs-express-api-hotels.git
 ```
 
 ### Node setup
