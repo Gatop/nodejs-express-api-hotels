@@ -1,0 +1,158 @@
+{
+	"id": "63b71194-6a32-6e79-afd9-b5654c801aa7",
+	"name": "Almundo - ApiRest",
+	"description": "",
+	"order": [
+		"e9352b3e-e27d-6d27-e684-bfe62797d98e",
+		"2ed478e8-8f46-62ff-e372-0ad8cd43b61b",
+		"ab7b095c-5985-148e-d893-a896a8509ca4",
+		"acb7586d-c226-9a97-fd76-36411288861f",
+		"67a94cf7-0709-72f7-232c-a147f4e7070a"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1527950277252,
+	"owner": "1283738",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "2ed478e8-8f46-62ff-e372-0ad8cd43b61b",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/hotels/249942",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": {
+				"type": "noauth"
+			},
+			"time": 1527972279789,
+			"name": "Hotels - GET By ID",
+			"description": "",
+			"collectionId": "63b71194-6a32-6e79-afd9-b5654c801aa7",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "67a94cf7-0709-72f7-232c-a147f4e7070a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/hotels/249942",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": {
+				"type": "noauth"
+			},
+			"time": 1527972291120,
+			"name": "Hotels - PUT - Update",
+			"description": "",
+			"collectionId": "63b71194-6a32-6e79-afd9-b5654c801aa7",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n    \"id\": \"249942\",\n    \"name\": \"Hotel Stefanos Updated\",\n    \"stars\": 3,\n    \"price\": 994.18,\n    \"image\": \"4900059_30_b.jpg\",\n    \"amenities\": [\n      \"safety-box\",\n      \"nightclub\",\n      \"deep-soaking-bathtub\",\n      \"beach\",\n      \"business-center\"\n    ]\n}"
+		},
+		{
+			"id": "ab7b095c-5985-148e-d893-a896a8509ca4",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/hotels/249942",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": {
+				"type": "noauth"
+			},
+			"time": 1527972350977,
+			"name": "Hotels - DELETE By ID",
+			"description": null,
+			"collectionId": "63b71194-6a32-6e79-afd9-b5654c801aa7",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "acb7586d-c226-9a97-fd76-36411288861f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/hotels",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": {
+				"type": "noauth"
+			},
+			"time": 1527972230436,
+			"name": "Hotels - POST - Create",
+			"description": "",
+			"collectionId": "63b71194-6a32-6e79-afd9-b5654c801aa7",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n    \"id\": \"249942\",\n    \"name\": \"Hotel Stefanos\",\n    \"stars\": 3,\n    \"price\": 994.18,\n    \"image\": \"4900059_30_b.jpg\",\n    \"amenities\": [\n      \"safety-box\",\n      \"nightclub\",\n      \"deep-soaking-bathtub\",\n      \"beach\",\n      \"business-center\"\n    ]\n}"
+		},
+		{
+			"id": "e9352b3e-e27d-6d27-e684-bfe62797d98e",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/hotels",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": {
+				"type": "noauth"
+			},
+			"time": 1527961204884,
+			"name": "Hotels - GET All",
+			"description": "",
+			"collectionId": "63b71194-6a32-6e79-afd9-b5654c801aa7",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}

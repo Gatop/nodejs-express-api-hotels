@@ -1,5 +1,5 @@
 const controller = {};
-var data  = require('./data.json');
+var data  = require('../../documentation/data.json');
 var Hotel = require('../models/hotel.js');
 
 /**
@@ -12,11 +12,11 @@ var Hotel = require('../models/hotel.js');
  */
 controller.list = (req, res) => {
     // Find stored docs in database
-    // If there is any problem return data.json
     Hotel.find(function(err, hotels) {
         // Handle an error response
+        // If there is any problem return data.json
         if (err)
-            res.send(data);
+            return res.send(data);
         res.json(hotels);
     });
 };
@@ -43,7 +43,7 @@ controller.create = (req, res) => {
     hotel.save(function(err) {
         // Handle an error response
         if (err) {
-            res.send(err);
+            return res.send(err);
         }
         res.json({ message: 'Hotel created!' });
     });
@@ -58,11 +58,15 @@ controller.create = (req, res) => {
  *   The response.
  */
 controller.findById = (req, res) => {
+    // Set the query to find by id
+    var query = { id: req.params.hotel_id };
     // Find the hotel by id
-    Hotel.findById(req.params.hotel_id, function(err, hotel) {
+    Hotel.findOne(query, function(err, hotel) {
         // Handle an error response
         if (err)
-            res.send(err);
+            return res.send(err);
+        if (!hotel)
+            return res.send({ message: 'Object not found.' });
         res.json(hotel);
     });
 };
@@ -76,11 +80,15 @@ controller.findById = (req, res) => {
  *   The response.
  */
 controller.update = (req, res) => {
+    // Set the query to find by id
+    var query = { id: req.params.hotel_id };
     // Find the hotel by id
-    Hotel.findById(req.params.hotel_id, function(err, hotel) {
+    Hotel.findOne(query, function(err, hotel) {
         // Handle an error response
         if (err)
-            res.send(err);
+            return res.send(err);
+        if (!hotel)
+            return res.send({ message: 'Object not found. Cannot be updated.' });
         // Update the field (if were sent in the request)
         if (req.body.name)
             hotel.name = req.body.name;
@@ -96,9 +104,9 @@ controller.update = (req, res) => {
         // Update the hotel and check for errors
         hotel.save(function(err) {
             // Handle an error response
-            if (err) {
-                res.send(err);
-            }
+            if (err)
+                return res.send(err);
+
             res.json({ message: 'Hotel updated!' });
         });
     });
@@ -113,14 +121,15 @@ controller.update = (req, res) => {
  *   The response.
  */
 controller.delete = (req, res) => {
-    // Find and remove the hotel from mongo
-    Hotel.findOneAndRemove({
-        _id: req.params.hotel_id
-    }, function(err, bear) {
+    // Set the query to find by id
+    var query = { id: req.params.hotel_id };
+    // delete the found hotel by id
+    Hotel.deleteOne(query, function(err) {
         // Handle an error response
         if (err)
-            res.send(err);
-        res.json({ message: 'Successfully deleted' });
+            return res.send(err);
+
+        res.json({ message: 'Hotel deleted!' });
     });
 };
 
