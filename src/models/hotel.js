@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
-// Declaring the Hotel schema
+// Hotel schema used in hotelController
 var HotelSchema = new Schema({
     id: String,
     name: String,

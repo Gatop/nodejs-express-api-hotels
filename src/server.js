@@ -17,6 +17,7 @@ api.set('port', process.env.PORT || 3000);
 api.use(bodyParser.urlencoded({ extended: true }));
 api.use(bodyParser.json());
 
+// Connect to mongo database
 mongoose.connect('mongodb://jegauser:test123@jega-cluster-shard-00-00-wykks.mongodb.net:27017,jega-cluster-shard-00-01-wykks.mongodb.net:27017,jega-cluster-shard-00-02-wykks.mongodb.net:27017/almundo?ssl=true&replicaSet=Jega-cluster-shard-0&authSource=admin&retryWrites=true');
 
 /***************
