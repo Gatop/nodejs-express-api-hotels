@@ -11,8 +11,14 @@ var Hotel = require('../models/hotel.js');
  *   The response.
  */
 controller.list = (req, res) => {
+    // If there is a query creaqte the new regexp
+    // And send the correct query to mongo
+    let query = '';
+    if (req.query.name) {
+        query = {'name' : new RegExp(req.query.name, 'i')};
+    }
     // Find stored docs in database
-    Hotel.find(function(err, hotels) {
+    Hotel.find(query ,function(err, hotels) {
         // Handle an error response
         // If there is any problem return data.json
         if (err)
