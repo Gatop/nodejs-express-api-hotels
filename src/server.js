@@ -13,6 +13,13 @@ const api = express();
 // Setting the port
 api.set('port', process.env.PORT || 3500);
 
+// Configuring the access control for the request
+api.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
+
 // Configure bodyParser allowing us getting data from a POST
 api.use(bodyParser.urlencoded({ extended: true }));
 api.use(bodyParser.json());
