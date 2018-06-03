@@ -11,7 +11,7 @@ const express    = require('express'),
 const api = express();
 
 // Setting the port
-api.set('port', process.env.PORT || 3000);
+api.set('port', process.env.PORT || 3500);
 
 // Configure bodyParser allowing us getting data from a POST
 api.use(bodyParser.urlencoded({ extended: true }));
@@ -42,5 +42,5 @@ api.use('/', hotelRoutes);
  ***********************/
 
 api.listen(api.get('port'), () => {
-  console.log('Running server on port 3000');
+  console.log('Running server on port 3500');
 });
