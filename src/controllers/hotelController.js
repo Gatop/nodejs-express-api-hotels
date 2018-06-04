@@ -13,9 +13,15 @@ var Hotel = require('../models/hotel.js');
 controller.list = (req, res) => {
     // If there is a query creaqte the new regexp
     // And send the correct query to mongo
-    let query = '';
+    let query = {};
     if (req.query.name) {
-        query = {'name' : new RegExp(req.query.name, 'i')};
+        term = new RegExp(req.query.name, 'i');
+        query.name = term;
+    }
+    // Set the query for the stars
+    if (req.query.stars) {
+        var array = JSON.parse("[" + req.query.stars + "]");
+        query.stars = array;
     }
     // Find stored docs in database
     Hotel.find(query ,function(err, hotels) {
