@@ -29,7 +29,7 @@ You can download these examples and import them with **Postman** to test the API
 
  * <a href="https://github.com/Gatop/nodejs-express-api-hotels/blob/master/documentation/Almundo%20-%20ApiRest.postman_collection.json">**Postman Requests**</a>
 
- To import the request you need to follow next steps:
+ To import request collection you need to follow next steps:
 
 ```sh
 Open Postman -> File -> Import -> Choose File
@@ -59,14 +59,14 @@ Open Postman -> File -> Import -> Choose File
 	|DELETE   | localhost:3000/hotels/249942                  | hotelController@delete                 |
 	+---------+-----------------------------------------------+----------------------------------------+
 
-Query Examples
+Query exmaples for GET ALL request:
 
-    ```sh
-    # Query Examples
-    localhost:3500/hotels?name=lim&stars=1,2
-    localhost:3500/hotels?stars=3
-    localhost:3500/hotels?name=lima
-    ```
+```sh
+# Query Examples
+localhost:3500/hotels?name=lim&stars=1,2
+localhost:3500/hotels?stars=3
+localhost:3500/hotels?name=lima
+```
 
 ## Modules
 
