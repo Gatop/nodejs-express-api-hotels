@@ -59,6 +59,8 @@ Open Postman -> File -> Import -> Choose File
 	|DELETE   | localhost:3000/hotels/249942                  | hotelController@delete                 |
 	+---------+-----------------------------------------------+----------------------------------------+
 
+Query Examples
+
     ```sh
     # Query Examples
     localhost:3500/hotels?name=lim&stars=1,2
