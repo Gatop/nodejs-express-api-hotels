@@ -70,7 +70,7 @@ localhost:3500/hotels?name=lima
 
 ## Modules
 
-This modules where used to create this API:
+These modules were used to create this API:
 
 * [express](https://www.npmjs.com/package/express)
 * [mongoose](https://www.npmjs.com/package/mongoose)
