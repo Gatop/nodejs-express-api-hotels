@@ -1,6 +1,6 @@
 # Nodejs-express-api-hotels
 
-This is an API built with **NodeJs** using **Express Framework**. Also a **MongoDB** is being used to retrieve information.
+This is an API built with **NodeJs** using **Express Framework**. Also a **MongoDB** is being used to retrieve information, this database is hosted in mongodb cloud.
 
 ### Clone the repo
 
