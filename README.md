@@ -25,9 +25,15 @@ nodemon src/server.js
 
 ## ApiRest requests
 
-You can download this examples and import them with **Postman** to test the API.
+You can download these examples and import them with **Postman** to test the API. Examples are stored as a "Collection v2.1" format.
 
  * <a href="https://github.com/Gatop/nodejs-express-api-hotels/blob/master/documentation/Almundo%20-%20ApiRest.postman_collection.json">**Postman Requests**</a>
+
+ To import the request you need to follow next steps:
+
+```sh
+Open Postman -> File -> Import -> Choose File
+```
 
 ### Endpoints APIRest (Mappings)
 
@@ -46,12 +52,19 @@ You can download this examples and import them with **Postman** to test the API.
 	+---------+-----------------------------------------------+----------------------------------------+
 	| Request | URI                                           | Action                                 |
 	+---------+-----------------------------------------------+----------------------------------------+
-	|GET      | localhost:3000/hotels                         | hotelController@list                   |
+	|GET      | localhost:3000/hotels?query                   | hotelController@list                   |
 	|GET      | localhost:3000/hotels/249942                  | hotelController@findById               |
 	|POST     | localhost:3000/hotels                         | hotelController@create                 |
 	|PUT      | localhost:3000/hotels/249942                  | hotelController@update                 |
 	|DELETE   | localhost:3000/hotels/249942                  | hotelController@delete                 |
 	+---------+-----------------------------------------------+----------------------------------------+
+
+    ```sh
+    # Query Examples
+    localhost:3500/hotels?name=lim&stars=1,2
+    localhost:3500/hotels?stars=3
+    localhost:3500/hotels?name=lima
+    ```
 
 ## Modules
 
